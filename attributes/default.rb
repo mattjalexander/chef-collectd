@@ -16,10 +16,10 @@
 
 default['collectd']['interval'] = 10
 default['collectd']['read_threads'] = 5
-default['collectd']['version'] = "5.1.0"
+default['collectd']['install_type'] = "package"
+default['collectd']['version'] = "5.1.0" unless node['collectd']['install_type'] == 'package'
 default['collectd']['fqdn_lookup'] = "false"
 default['collectd']['server_role'] = "collectd-server"
-default['collectd']['install_type'] = "package"
 default['collectd']['source_tar_name_prefix'] = "collectd-"
 default['collectd']['source_tar_name_extension'] = ".tar.gz"
 default['collectd']['source_url_prefix'] = "http://collectd.org/files/"

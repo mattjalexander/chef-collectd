@@ -11,12 +11,6 @@ describe 'collectd::client' do
     service('collectd').must_be_enabled
   end
 
-  describe 'collectd::_install_from_package' do
-    it 'installs collectd' do
-      package('collectd').must_be_installed
-    end
-  end
-
   describe 'collectd::_server_conf' do
     it 'creates the sysconf_dir' do
       directory(node['collectd']['sysconf_dir']).must_exist
@@ -38,5 +32,4 @@ describe 'collectd::client' do
       collectd_config_parses?
     end
   end
-
 end
