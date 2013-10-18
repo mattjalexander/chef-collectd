@@ -58,7 +58,7 @@ else
       :derive_counters => true,
       :lowercase_metric_names => true,
       :differentiate_counters_over_time => true,
-      :MetricPrefix => node['collectd']['graphite_prefix'],
+      :metric_prefix => node['collectd']['graphite_prefix'],
       :types_d_b => node['collectd']['types_db']
     type 'python'
   end
